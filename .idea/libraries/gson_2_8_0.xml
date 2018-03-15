@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="gson-2.8.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/gson-2.8.0.jar!/" />
+      <root url="file://D:/Program Files/Tomcat 8.5/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://D:/Program Files/Tomcat 8.5/lib" recursive="false" />
+  </library>
+</component>
