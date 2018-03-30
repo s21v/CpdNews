@@ -76,6 +76,20 @@ public class VideoNewsDBServlet extends HttpServlet {
 				} else {
 					response.sendError(500, "数据库获取不到视频新闻");
 				}
+			} else if ("getNewsByPage".equals(method)) {
+				int channelId = Integer.parseInt(request.getParameter("cid"));
+				int page = Integer.parseInt(request.getParameter("curPage"));
+				int count = Integer.parseInt(request.getParameter("count"));
+				VideoNewsDaoImpl dao = new VideoNewsDaoImpl(dataBaseConnection.getConn());
+				ArrayList<News> result = dao.getNewsByPage(channelId, count, (page-1)*count);
+				if (result != null) {
+					Gson gson = new Gson();
+					response.setStatus(200);
+					response.setHeader("Content-type", "text/html;charset=UTF-8");
+					response.getWriter().append(gson.toJson(result));
+				} else {
+					response.sendError(500, "数据库获取不到视频新闻");
+				}
 			}
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();

@@ -6,7 +6,7 @@ import com.sun.org.apache.xml.internal.security.algorithms.implementations.Integ
 
 public interface NewsDao {
 	
-	//·ÖÒ³²éÑ¯ÖÆ¶¨À¸Ä¿ÏÂµÄÐÂÎÅ
+	//ï¿½ï¿½Ò³ï¿½ï¿½Ñ¯ï¿½Æ¶ï¿½ï¿½ï¿½Ä¿ï¿½Âµï¿½ï¿½ï¿½ï¿½ï¿½
 	ArrayList<News> searchNews(String channel_id, int limitNum, int offset) throws Exception;
 	
 }
