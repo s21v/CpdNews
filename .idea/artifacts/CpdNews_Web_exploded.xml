@@ -8,6 +8,7 @@
           <element id="module-output" name="CpdNews" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="lib" />
           <element id="library" level="project" name="gson-2.8.0" />
         </element>
       </element>
