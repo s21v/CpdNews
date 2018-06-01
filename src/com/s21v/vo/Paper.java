@@ -1,7 +1,11 @@
 package com.s21v.vo;
 
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 public class Paper {
-    private String date;
+    private Date date;
     private String number;
     private String name;
     private String type;
@@ -11,7 +15,7 @@ public class Paper {
     private String thumbPath;
     private String fullImgPath;
 
-    public Paper(String date, String number, String name, String type, String xmlPath, String imgPath, boolean isWide, String thumbPath, String fullImgPath) {
+    public Paper(Date date, String number, String name, String type, String xmlPath, String imgPath, boolean isWide, String thumbPath, String fullImgPath) {
         this.date = date;
         this.number = number;
         this.name = name;
@@ -23,7 +27,7 @@ public class Paper {
         this.fullImgPath = fullImgPath;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
@@ -57,6 +61,10 @@ public class Paper {
 
     public void setFullImgPath(String fullImgPath) {
         this.fullImgPath = fullImgPath;
+    }
+
+    public Date getDate() {
+        return date;
     }
 
     @Override
